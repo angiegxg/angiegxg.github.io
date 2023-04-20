@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/hamburger.css">
+    <script src="js/index.js"></script>
+    <title>Marvel Personajes</title>
+</head>
+
+<body id="bodyPersonajes">
+    
+    
+    <header class="headerOrigen">
+        <a href="index.html"><img src="img/logo2.png" alt="Logo marvel"></a>
+       
+        <div class="top-bar">
+            <button id="burger" class="hamburger hamburger--collapse" type="button" onclick="toggleMenu()">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+        <nav id="menu-mob" class="menu menu-mob">
+            <ul class="banger">
+                <li><a href="origen.html">Origenes</a></li>
+                <li><a href="personajes.html">Personajes</a></li>
+                <li><a href="curiosidades.html">Curiosidades</a></li>
+                
+            </ul>
+        </nav>
+        
+        
+    </header>
+
+    <section id="personajes">
+
+        <div id="img">
+            <img src="img/iron.jpg" alt="iron" id="iron"
+                onmouseover="cambiarTexto('Ironman','El personaje detrás de Iron Man es Tony Stark, un genio multimillonario y playboy que crea un traje de alta tecnología con armamento avanzado después de ser gravemente herido en una zona de guerra. El traje le permite volar, tiene una fuerza sobrehumana y está equipado con una variedad de armas y herramientas.')"
+                onmouseout="resetearTexto()">
+            <img src="img/hawkeye.jpeg" alt="hawkeye" id="hawkeye"
+                onmouseover="cambiarTexto('Hawkeye', 'Su nombre real es Clint Barton, y es un arquero excepcional y un experto en artes marciales.A pesar de que no tiene superpoderes, es capaz de mantenerse al nivel de los héroes más poderosos de Marvel gracias a su habilidad con el arco y la flecha y su entrenamiento como agente de S.H.I.E.L.D. Además, tiene una personalidad única que lo diferencia de otros héroes de Marvel. Es un personaje sarcástico y a menudo irónico, pero también es muy leal a sus amigos y compañeros de equipo.')"
+                onmouseout="resetearTexto()">
+            <img src="img/thor.jpg" alt="thor" id="thor" onmouseover="cambiarTexto('Thor', ' Es el dios del trueno y uno de los miembros fundadores de los Vengadores. Thor es un guerrero poderoso y valiente, con una fuerza sobrehumana y habilidades de combate superiores. Posee un martillo mágico llamado Mjolnir que solo puede ser levantado por aquellos que son dignos, y que le permite controlar el clima y viajar a través del espacio.')" onmouseout="resetearTexto()">
+            <img src="img/capi.jpeg" alt="capi" id="capi" onmouseover="cambiarTexto('Capitan America', ' Steve Rogers que fue seleccionado para un programa experimental que lo convirtió en un super soldado con habilidades físicas sobrehumanas. El Capitán América lucha por la justicia y la libertad, y se ha convertido en un símbolo de los ideales estadounidenses. Porta un escudo indestructible hecho de vibranium, que utiliza en combate y también para proteger a sus compañeros.')" onmouseout="resetearTexto()">
+            <img src="img/viuda negra.jpg" alt="viuda-negra" id="viuda" onmouseover="cambiarTexto('Viuda Negra','Es una espía y una asesina altamente entrenada que ha luchado tanto con los buenos como con los malos. Romanoff fue reclutada por la KGB y entrenada como una asesina, antes de desertar y unirse a los Vengadores. Viuda Negra es una experta en artes marciales, tiene una gran habilidad en el combate cuerpo a cuerpo y es experta en el uso de armas y gadgets. ')"
+                onmouseout="resetearTexto()">
+            <img src="img/hulk.jpg" alt="hulk" id="hulk" onmouseover="cambiarTexto('Hulk',' Su alter ego es Bruce Banner, un científico que se convierte en un gigante verde y musculoso cuando está enfurecido o bajo estrés. Hulk tiene una fuerza física increíble y es prácticamente invulnerable. A menudo es visto como un monstruo peligroso, pero también es conocido por su heroísmo y su papel como miembro de los Vengadores.')" onmouseout="resetearTexto()">
+        </div>
+
+        <div id="descripcionimagen">
+            <h2 id="nombrePersonaje" class="banger">Super Heroe:</h2>
+            <p id="descripcion" class="roboto"> Clic en las imagenes para conocer más de tus super héroes favoritos</p>
+        </div>
+
+    </section>
+    <footer class="roboto">made with love by Angie Garcia</footer>
+    
+</body>
+</html>

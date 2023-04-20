@@ -1,0 +1,726 @@
+/* Inicio fuentes____________________________________ */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@100;300&display=swap');
+
+:root {
+    --amarillo: #f6db0b;
+    --rojo: #ea2328;
+}
+
+.banger {
+    font-family: 'Bangers', cursive;
+    font-size: 2.5em;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+}
+
+/* Fin fuentes_________________________________________ */
+
+
+/* Inicio mini reset___________________________________ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+/* Fin mini reset______________________________________ */
+
+
+
+/* _________________________________________________________
+Inicio index*/
+
+.container {
+    perspective: 1000px;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background: radial-gradient(ellipse at center, black 0%, transparent 100%), url(../img/fondo7.jpg) center/cover;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    width: 100%;
+    max-width: 100%;
+    transform: translate(-50%, -50%) translateZ(-50px) rotate(90deg) scale(1.5);
+    transition: transform 0.2s ease-out;
+
+
+}
+
+.parallax:hover {
+
+    filter: drop-shadow(2px 2px 5px var(--amarillo));
+    transform: rotate(90deg);
+}
+
+#menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background: rgb(240, 248, 255, 0.8);
+    margin: auto;
+    z-index: 6;
+    border-radius: 20px;
+    display: none;
+    padding: 20px;
+    text-align: center;
+
+}
+
+
+
+header ul li a {
+    color: black;
+}
+
+header ul li a:active {
+    color: var(--rojo);
+}
+
+header ul li a:hover {
+    color: var(--rojo);
+}
+
+#cerrarMenu {
+    background-color: #ea2328;
+    color: aliceblue;
+    border: transparent;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border-radius: 5px;
+    width: auto;
+    padding: 5px;
+}
+
+
+.indicacion {
+    position: absolute;
+    padding: 5px;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(240, 248, 255, 0.8);
+    width: auto;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5rem;
+
+    border: 2px dashed;
+}
+
+.indicacion:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 5px solid aliceblue;
+    border-top: 5px solid aliceblue;
+    top: -30px;
+    left: 50%;
+    transform: rotate(45deg);
+    animation: saltar 0.5s ease-in-out infinite alternate;
+
+}
+
+@keyframes saltar {
+    0% {
+        top: -20px;
+    }
+
+    50% {
+        top: -30px;
+    }
+
+    100% {
+        top: -20px;
+    }
+}
+
+@media only screen and (min-width:600px) {
+    .parallax {
+        transform: translate(-50%, -50%) translateZ(-50px);
+
+    }
+
+}
+
+/* ______________________________________________________________
+Inicio pag Header */
+
+.headerOrigen {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--rojo);
+    padding: 0px 15px;
+    box-shadow: 3px 1px 20px 2px var(--amarillo);
+    position: fixed;
+    top: 0;
+    margin-bottom: 0;
+    z-index: 5;
+}
+
+.headerOrigen img {
+    max-height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* Menu */
+
+.menu ul {
+    list-style: none;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.menu-mob {
+    position: fixed;
+    z-index: 700;
+    right: -100vw;
+    top: 0;
+    background: transparent url(../img/923.jpg) center/cover;
+    height: 100vh;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 1s;
+}
+
+.menu-open {
+    width: 100vw;
+    right: 0;
+    transition: all 1s;
+}
+
+.menu-mob li {
+    margin: 20px 0;
+}
+
+.top-bar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 900;
+
+}
+
+/* Inicio pagina Origenes */
+#bodyOrigen {
+    background: linear-gradient(rgba(238, 237, 237, 0.5), rgba(238, 237, 237, 0.5)), url(../img/pxfuel\ \(2\).jpg) no-repeat center/cover;
+
+}
+
+#main {
+    position: relative;
+}
+
+.instruccion{
+    height: 300px;
+    border-radius: 10px;
+    margin: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    padding: 5%;
+    text-align: center;
+}
+.instruccion img{
+    height: 90%;
+}
+
+.instruccion p{
+    color: black;
+
+}
+
+.lineaTiempo {
+    margin:0px 50px;
+    height: 100%;
+}
+
+.lineaTiempoCartas {
+    padding:  0px 30px 5px;
+    margin-top: 50px;
+}
+
+.lineaTiempoCartas:before {
+    content: '';
+    position: absolute;
+    left: 40+px;
+    width: 2px;
+    bottom: 15px;
+    top: 13%;
+    outline: 3px dashed black;
+
+}
+
+.lineaTiempo:before,
+.lineaTiempo:after {
+    position: absolute;
+    left: 40px;
+    width: auto;
+    margin-top: 50px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: var(--amarillo);
+    font-family: 'Bangers', cursive;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    padding: 3px;
+    border-radius: 10px;
+    z-index: 3;
+
+}
+
+.lineaTiempo:before {
+    content: 'Inicio';
+    top: 10%;
+
+
+}
+
+.lineaTiempo:after {
+    content: 'Fin';
+    left: 58px;
+    bottom: 8px;
+}
+
+
+
+.carta {
+    width: 100%;
+    height: 300px;
+    margin: 20px;
+    position: relative;
+    box-shadow: 0 10px 15px 0px gray;
+    border-radius: 10px;
+
+}
+
+.carta:before {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--rojo);
+
+    position: absolute;
+    top: 16px;
+    left: -29px;
+
+}
+
+
+.imgCarta {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+
+    border-radius: 10px;
+}
+
+
+
+.tituloCarta {
+    display: grid;
+    place-items: center;
+    margin-bottom: 5px;
+    font-size: 3rem;
+    color: aliceblue;
+    letter-spacing: 3px;
+
+
+}
+
+.infoCarta {
+    background-color: var(--rojo);
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+    padding: 5px;
+    border-radius: 0 0px 10px 10px;
+}
+
+.descripcionCarta {
+    opacity: 0;
+    height: 40px;
+    background-color: var(--amarillo);
+    color: black;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 0.8rem;
+    text-align: center;
+
+}
+
+.infoCarta:hover,
+.descripcionCarta:hover{
+    height: auto;
+    opacity: 1;
+
+}
+
+/* Inicio caja de imagenes_______________________________ */
+#img {
+    display: flex;
+    width: 100%;
+    height: 430px;
+}
+
+#img img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+
+}
+
+#img img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+    box-shadow: 0 0 2 black;
+    border-radius: 10px;
+
+}
+
+#personajes {
+    display: grid;
+    grid-template-columns: 1fr ;
+    margin: 4%;
+    height:calc(100vh - 50px);
+    padding: 100px 10px;
+}
+
+#descripcionimagen {
+    display: grid;
+    text-align: center;
+    padding: 10%;
+    align-content: flex-start;
+
+
+}
+#bodyPersonajes{
+    background: radial-gradient(ellipse at center, white 50%, transparent),
+    url(../img/pxfuel\ \(2\).jpg) no-repeat center/cover;
+height: 100vh
+}
+
+/*fin caja de imagenes ________________________________*/
+
+/* Inicio Pag Curiosidades */
+#mainCuriosidades{
+    margin-top: 100px;
+}
+.containerCuriosidades{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* para alinear verticalmente los elementos */
+   justify-content: center;
+ }
+ 
+ 
+  .card{
+     height:400px;
+     width:200px;
+     margin: 2%;
+     background-color: whitesmoke;
+     box-shadow: 0 2px 4px var(--amarillo);
+     padding: 1.5%;
+     border-radius: 2%;
+     display: grid;
+     grid-template: 2fr 1fr, 1fr;
+     place-content: center;
+     gap: 10px;
+  }
+
+  .card img{
+    width: 100%;
+    object-fit: cover;
+    place-self: center;
+
+ }
+ .pcard{
+     max-height: 100%;
+     overflow: scroll;      
+     text-align: justify;
+     font-size: 0.7rem;
+     padding: 8px;
+    
+ }
+ 
+ .pcard::-webkit-scrollbar {
+     width: 8px; /* ancho del scroll */
+   }
+   
+ .pcard::-webkit-scrollbar-track {
+     background-color: #F5F5F5; /* color del fondo del track del scroll */
+   }
+   
+ .pcard::-webkit-scrollbar-thumb {
+     background-color: var(--rojo); /* color del scroll */
+     border-radius: 5px; /* borde redondeado */
+   }
+ 
+ 
+ 
+ #p-mensaje{
+     margin-bottom: 20px;
+ }
+ 
+ 
+ 
+/* Fin Pag Curiosidades */
+
+
+/* Inicio pag origenes */
+
+footer {
+    background-color: var(--rojo);
+    height: 50px;
+    display: grid;
+    place-content: center;
+    color: aliceblue;
+    /* position: fixed;
+    bottom: 0px;
+    width: 100vw; */
+
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 600px) {
+    .menu-open {
+        width: 420px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .headerOrigen {
+        padding: 0px;
+    }
+
+    .menu-open {
+        width: 0px;
+        left: -420px;
+    }
+
+    .dark-bg {
+        display: none;
+    }
+
+    .top-bar {
+        display: none;
+    }
+
+    .menu-mob {
+        position: static;
+        height: 50px;
+        width: 100vw;
+        transition: none;
+    }
+
+    .menu-mob ul {
+        width: 500px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    /* ________________________ */
+
+    .lineaTiempo {
+
+        margin: 20px auto;
+        width: 100%;
+        max-width: 850%;
+        padding: 10px 10%;
+        ;
+    }
+
+    .lineaTiempo:before,
+    .lineaTiempo:after {
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2.5rem;
+        padding: 4px;
+        background-color: var(--rojo);
+        color: aliceblue;
+
+
+    }
+
+    .lineaTiempo:before{
+        top:11%;
+    }
+
+    .lineaTiempoCartas:before {
+        top: -3%;
+        left: 50%;
+    }
+    .lineaTiempoCartas:after {
+        bottom: 0%;
+        left: 50%;
+    }
+
+    .lineaTiempo .lineaTiempoCartas .carta {
+        position: realtive;
+        width: calc(50% - 20px);
+        margin: 20px 0px;
+
+    }
+
+    .lineaTiempo .lineaTiempoCartas .carta:nth-child(even) {
+        left: calc(50% + 20px);
+    }
+
+
+
+
+    .carta:before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--rojo);
+        border: 3px solid;
+        position: absolute;
+        top: 15px;
+        right: -33px;
+        margin-right: 1;
+    }
+
+
+
+    .carta:nth-child(even):before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--rojo);
+        border: 3px solid;
+        position: absolute;
+        top: 10px;
+        left: -34px;
+
+    }
+
+    .carta:before {
+        left: 102%;
+    }
+
+
+
+    .descripcionCarta {
+        display: none;
+
+    }
+
+    .lineaTiempoCartas {
+        position: relative;
+    }
+
+    .carta:hover:after {
+        content: 'Timely Comics (que más tarde se convertiría en Marvel Comics) publica su primer cómic, "Marvel Comics #1", presentando a personajes como la Antorcha Humana original y Namor el Submarino.';
+        position: absolute;
+        height: auto;
+        width: 300px;
+        background-color: var(--amarillo);
+        padding: 20px;
+        margin: 18% 40px;
+        font-family: 'Roboto';
+        right: -450px;
+        opacity: 1;
+        font-weight: 700;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 10px;
+        border: 3px solid black;
+
+    }
+
+    .carta:nth-child(even):hover:after {
+        content: 'Timely Comics (que más tarde se convertiría en Marvel Comics) publica su primer cómic, "Marvel Comics #1", presentando a personajes como la Antorcha Humana original y Namor el Submarino.';
+        position: absolute;
+        height: auto;
+        transform: translateY(50% -50%);
+        left: -450px;
+        width: 300px;
+        background-color: var(--amarillo);
+        padding: 20px;
+        margin: 18% 40px;
+        font-family: 'Roboto';
+        opacity: 1;
+        font-weight: 700;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 10px;
+        border: 3px solid black;
+    }
+
+
+    #personajes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 4%;
+        height: calc(100vh - 100px);
+        padding: 100px 10px;
+    }
+
+
+}
+
+
+
+
+
+
+/* @media only screen and (orientation: landscape) {
+    /* Podemos cambiar la posición de los CTA para facilitar el click del usuario que pasará a usar las 2 manos sobre el móvil  */
